@@ -48,7 +48,6 @@ UI.prototype.showAlert =  function(message,className){
 
 UI.prototype.deleteBook = function(target){
     if(target.className ==="delete"){
-
         target.parentElement.parentElement.remove();
     }
 }
