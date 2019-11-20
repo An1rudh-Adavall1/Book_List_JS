@@ -65,7 +65,7 @@ class Store{
     static displayBooks() {
         let books = Store.getBooks();
         books.forEach(function(book){
-            const ui = new UI();
+            const ui = new UI;
             ui.addBookToList(book);
         });
 
@@ -79,9 +79,10 @@ class Store{
     }
 
     static removeBook(isbn){
-        const books = Store.getBooks();
-        books.forEach(function(book, index){ 
-            if(book.isbn === isbn){ 
+
+        let books = Store.getBooks();
+        books.forEach(function(book, index){
+            if (book.isbn === isbn){
                 books.splice(index, 1);
             }
         });
